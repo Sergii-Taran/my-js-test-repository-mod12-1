@@ -18,42 +18,100 @@
 
 /* ------- daily tasks ------- */
 
-ul {
-  margin: 0;
-  padding: 0;
-}
-
 .wrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  background-color: #fff;
+  width: 100%;
+  max-width: 420px;
+  padding: 30px 25px;
+  border-radius: 20px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  margin: 0 auto;
 }
 
-h1 {
-  margin: 0;
+.todo__form {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 25px;
+}
+
+.todo__form input {
+  flex-grow: 1;
+  padding: 12px 15px;
+  border: 2px solid #e2e8f0;
+  border-radius: 10px;
+  font-size: 16px;
+  outline: none;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.todo__form input:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+}
+
+.todo__form input::placeholder {
+  font-size: 18px;
+  color: #aaa;
+  opacity: 1;
+}
+
+.list {
+  list-style: none;
+  margin-top: 20px;
+  padding-left: 0;
+  text-align: left;
 }
 
 .list__item {
   display: flex;
-  width: 300px;
-  margin: 10px 0;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #f9fafb;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  padding: 10px 15px;
+  margin-bottom: 10px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-.list__title {
-  margin: 0;
-  margin-left: 15px;
-  flex: 1 0 auto;
+.list__item:hover {
+  background-color: #f1f5f9;
+  transform: translateY(-2px);
 }
 
-button {
+.list__checkbox {
+  width: 24px;
+  height: 24px;
+  accent-color: #3b82f6;
   cursor: pointer;
 }
 
-.todo__form {
-  width: 200px;
-  margin-top: 30px;
+.list__title {
+  flex-grow: 1;
+  margin: 0 12px;
+  font-size: 24px;
+  word-break: break-word;
 }
 
-.todo__form input {
-  width: 100%;
+.list__checkbox:checked + .list__title {
+  text-decoration: line-through;
+  color: #9ca3af;
+}
+
+.list__btn {
+  background-color: #ef4444;
+  border: none;
+  color: #fff;
+  font-weight: bold;
+  font-size: 20px;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.list__btn:hover {
+  background-color: #dc2626;
+  transform: scale(1.1);
 }
