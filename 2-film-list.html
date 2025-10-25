@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Daily tasks</title>
-    <script type="module" crossorigin src="/my-js-test-repository-mod12-1/1-daily-tasks.js"></script>
+    <title>Film list</title>
+    <script type="module" crossorigin src="/my-js-test-repository-mod12-1/2-film-list.js"></script>
     <link rel="modulepreload" crossorigin href="/my-js-test-repository-mod12-1/assets/modulepreload-polyfill-B5Qt9EMX.js">
     <link rel="modulepreload" crossorigin href="/my-js-test-repository-mod12-1/assets/vendor-CWxt7QI6.js">
     <link rel="stylesheet" crossorigin href="/my-js-test-repository-mod12-1/assets/styles-CWkDJDTa.css">
@@ -14,16 +14,18 @@
     <main>
       <div class="container">
         <a class="back-link" href="./index.html">Go back</a>
-        <h1 class="main-title">Daily tasks</h1>
+        <h1 class="main-title">Film list</h1>
       </div>
-      <div id="app">
-        <div class="wrapper">
-          <form class="todo__form">
-            <input type="text" name="todo" placeholder="Додати справу" />
-          </form>
 
-          <ul class="list"></ul>
+      <div id="app">
+        <ul class="js-movie-list movie-list"></ul>
+        <!-- Load more -->
+        <div class="button-container">
+          <button class="js-load-more load-more-hidden">Load more</button>
         </div>
+
+        <!-- Infinity scroll -->
+        <!-- <div class="js-guard"></div> -->
       </div>
     </main>
 
